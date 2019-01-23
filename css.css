@@ -1,6 +1,11 @@
 .dan
 {
-	background-color:red;
+    background-color: red;
+}
+
+#dan1
+{
+    background-color: red;
 }
 #dan2
 {
@@ -12,27 +17,27 @@
 }
 #dan4
 {
-	background-color:red;
+	background-color:blueviolet
 }
 #dan5
 {
-	background-color:green;
+	background-color:gold;
 }
 #dan6
 {
-	background-color:blue;
+	background-color:aqua;
 }
 #dan7
 {
-	background-color:red;
+	background-color:indianred;
 }
 #dan8
 {
-	background-color:green;
+	background-color:darkolivegreen;
 }
 #dan9
 {
-	background-color:blue
+	background-color:darkorchid
 }
 
 

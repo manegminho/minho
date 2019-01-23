@@ -1,87 +1,35 @@
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title> 1~9 구구단 출력 1-2 과제</title>
+        <script src = "https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <link rel="stylesheet" strle type = "text/css" href = "css.css">
+    </head>
 
-<head>
-    <meta charset="utf-8">
+    <body>
+        <!-- app 안에 각각 단 id div안에 구구단을 뿌리시오 -->
+        <div id = "app">
 
-    <title> 1~9 구구단 출력 1-2 과제</title>
-  
-   <script src = "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
-
-   <link rel="stylesheet" style type="text/css" href= "css.css">
-</head>
-
-<body>
-    <!--2. app 안에 각각 단 id div안에 단별로 구구단을 뿌리시오-->
-    <div id="app">
-    
-    </div>
-</body>
-<script>
-    $(window).ready(function() {
-        for (var i = 2; i <= 9; i++) {
-            $("#app").append('<div class="dan"></div>');
-            for (var j = 1; j <= 9; j++) {
-                var result = "";
-                result = i*j;
-                result = i + " X " + j + " = " +result + "<br>";
-                $(".dan").eq(i-2).append(result);
-                 $(".dan").eq(i-2).css("background-color","#ff");
-                console.log(result);
-            }        
-            //result = ndigit * j;
-
-            //document.write( "<br>" + ndigit +" X " + j + "=" + result);
-      
-            
-        }
-    });
-    /*
-     window.addEventListener('click', function() {
-        var t= document.getElementById("dan1").style.background = "blue";
-        cal(1,t);
-     })
-
-    $(document).ready(function() {
-        var t= document.getElementById('dan1');
-        //cal(1);
-    });
-    
-    $(window).load(function(){
-        alert('$(window).load 실행');
-        cal(1);
-    });
-
-    function change_background_color() 
-    {
-        $("#dan1").css("background-color","blue");
-        
-    }   
-
-
-    function cal(num,ID)
-    {
-        var ndigit = num;
-        var result;
-        
-
-        for(var j=1;j<10;j++)
-        {
-            result = ndigit * j;
-
-            document.write( "<br>" + ndigit +" X " + j + "=" + result);
-        }
-        document.write("<hr>" );
-      
-    }
-*/
-
-    /*
-        		3. jquery window ready,  window load를 이해하고 둘의 호출 순서 및 뜻을 이해하시오.
-        		4. 만든 소스를 github를 사용하시오. (https://github.com/) 깃허브가입하고 저장소에 커밋푸시 주소를 공유하시오
-        			ex) https://github.com/zerocoolrush/test.git
-        		5. html 로드 순서를 파악하시오. ex) https://jeong-pro.tistory.com/90, https://code.i-harness.com/ko-kr/q/1b656e
-
-        		*/
-</script>
-
+        </div>
+    </body>
+    <script>
+        $(window).ready(function()  {
+            var stColor = ["FF0000","00FF00","000FF"]
+            var nResult; var strMsg;
+           
+            for(var i = 1 ; i<10;i++)
+            {
+                $("#app").append('<div class = "dan"></div>');
+                for(var j=1 ; j<10;j++)
+                {
+                    strMsg = "";
+                    nResult = 0;
+                    nResult = i*j;
+                    strMsg = i + "X" + j + "=" + nResult + "<br>";
+                    $(".dan").eq(i-1).append(strMsg);
+                    $(".dan").eq(i-1).css("background-color",stColor[i%3]);
+                }
+            }
+        });
+    </script>
 </html>
